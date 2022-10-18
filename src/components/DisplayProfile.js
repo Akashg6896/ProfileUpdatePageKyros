@@ -19,19 +19,19 @@ const DisplayProfile = () => {
       {/* <Im */}
       <Stack
         direction={'column'}
-        spacing={4}
         sx={{
-          marginTop: '100px',
+          marginTop: '120px',
           marginLeft: '40px',
+          marginBottom: '0px',
         }}
       >
         <div
           style={{
             // border: '2px solid black',
             borderRadius: '10%',
-            margin: '0px 80px',
+            margin: '0px 120px',
             width: '150px',
-            height: '200px',
+            height: '180px',
             backgroundImage: `url(${backgroundImage})`,
             backgroundSize: 'cover',
           }}
@@ -40,19 +40,22 @@ const DisplayProfile = () => {
           variant='text'
           color='disabled'
           sx={{
-            position: 'absolute',
-            bottom: '360px',
-            right: '90px',
+            position: 'relative',
+            bottom: '65px',
+            left: '250px',
             backgroundColor: 'white',
-            padding: '5px',
-            borderRadius: '10%',
+            padding: '10px',
+            borderRadius: '20%',
+            color: 'black',
+            margin: '0px',
           }}
         />
-        <Box display={'flex'} flexDirection={'column'} spacing={2}>
+        <Box display={'flex'} flexDirection={'column'} spacing={0} p={0} m={0}>
           <Typography variant='h6' fontSize={'large'} fontWeight={'bold'}>
             {UserProfileState.firstName === sampleProfile.firstName || ''
               ? sampleProfile.firstName
-              : UserProfileState.firstName}{' '}
+              : UserProfileState.firstName}
+            &nbsp;
             {UserProfileState.lastName === sampleProfile.lastName || ''
               ? sampleProfile.lastName
               : UserProfileState.lastName}
